@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+
 <body>
     <p>lalalalallalalallalalalalalalaallalal</p>
     <p>lalalalallalalallalalalalalalaallalal</p>
@@ -15,5 +18,55 @@
     <p>lalalalallalalallalalalalalalaallalal</p>
     <p>lalalalallalalallalalalalalalaallalal</p>
     <p>lalalalallalalallalalalalalalaallalal</p>
+
+    <button id="home">跳转到首页</button>
+    <button id="index01">跳转到指定页面</button>
+
+    <script type="module">
+        import $route2 from './js/common.js'
+        window.onload = function () {
+            console.log('111111页面加载')
+        }
+        // import $util from '../../../../../utils/util';
+        // const $route =require('/js/route.js')
+        // import aa from './js/route.js'
+        var goHome = document.getElementById('home')
+        var goindex01 = document.getElementById('index01')
+        goHome.onclick = function () {
+            console.log('87987979');
+            let param = {
+                name: 'abg',
+                age: 18
+            }
+            $route2.comMonth.goBackminipage('pages/index/index', param, 3)
+        }
+        goindex01.onclick = function () {
+            console.log('87987979');
+            let param = {
+                name: 'abgaaa',
+                age: 18
+            }
+            $route2.comMonth.goBackminipage('pages/about/about', param, 1)
+        }
+        // function goHome() {
+        //     console.log('5646565');
+        // let param = {
+        //     name: 'abg',
+        //     age: 18
+        // }
+        // $route2.goBackminipage('pages/index/index', param, 3)
+        // }
+        // function goindex01() {
+        //     console.log('87987979');
+        //     // let param = {
+        //     //     name: 'abgaaa',
+        //     //     age: 18
+        //     // }
+        //     // $route2.comMonth('pages/about/about', param, 1)
+        // }
+
+    </script>
+
 </body>
+
 </html>
